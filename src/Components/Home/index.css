@@ -1,0 +1,113 @@
+.home-container {
+  width: 100%;
+  min-height: 107vh;
+  background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+}
+.image-context-container {
+  padding: 10px;
+}
+@media screen and (min-width: 768px) {
+  .image-context-container {
+    display: flex;
+  }
+}
+.image-fluid {
+  border-radius: 400px;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .image-fluid {
+    /* width: 50%; */
+    /* height: 400px; */
+  }
+}
+@media screen and (min-width: 1200px) {
+  .image-fluid {
+    /* width: 30%;
+    height: 400px; */
+  }
+}
+.context-title {
+  text-align: center;
+  font-style: italic;
+}
+.projects-btn {
+  background-color: black;
+  border-radius: 8px;
+  height: 50px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  color: white;
+}
+.context-container {
+  border: 1px solid;
+  padding: 10px;
+  border-radius: 8px;
+}
+@media screen and (min-width: 768px) {
+  .context-container {
+    margin-left: 15px;
+  }
+}
+.skill-title {
+  text-align: center;
+  font-style: italic;
+}
+@media screen and (min-width: 768px) {
+  .skill-title {
+    display: none;
+  }
+}
+
+.lg-skill-title {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .lg-skill-title {
+    text-align: center;
+    font-style: italic;
+    display: block;
+  }
+}
+.skill-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  list-style-type: none;
+}
+@media screen and (min-width: 768px) {
+  .skill-list {
+    display: none;
+  }
+}
+.lg-skill-list {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .lg-skill-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    list-style-type: none;
+  }
+}
+.skill-item {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+@media screen and (min-width: 768px) {
+  .footer-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 8px;
+    padding: 10px;
+  }
+}
