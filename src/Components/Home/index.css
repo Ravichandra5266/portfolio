@@ -2,6 +2,7 @@
   width: 100%;
   min-height: 107vh;
   background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+  padding-bottom: 100px;
 }
 .image-context-container {
   padding: 10px;
@@ -28,8 +29,15 @@
   }
 }
 .context-title {
-  text-align: center;
   font-style: italic;
+  color: orange;
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+}
+@media screen and (min-width: 768px) {
+  .context-title {
+    font-size: 32px;
+  }
 }
 .projects-btn {
   background-color: black;
@@ -38,6 +46,15 @@
   border: 1px solid transparent;
   cursor: pointer;
   color: white;
+}
+.projects-btn:hover {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 100%,
+    rgba(0, 212, 255, 1) 100%
+  );
 }
 .context-container {
   border: 1px solid;
@@ -96,8 +113,8 @@
   }
 }
 .skill-item {
-  margin-right: 10px;
-  margin-left: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
 }
 @media screen and (min-width: 768px) {
   .footer-section {
@@ -109,5 +126,20 @@
     margin-right: 10px;
     border-radius: 8px;
     padding: 10px;
+  }
+}
+.skill-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.skill-icons {
+  font-size: 18px;
+  margin-right: 5px;
+  color: yellow;
+}
+@media screen and (min-width: 768px) {
+  .skill-icons {
+    font-size: 32px;
   }
 }

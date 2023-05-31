@@ -1,6 +1,6 @@
 import "./index.css";
 
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import { GiHamburgerMenu } from "react-icons/gi";
 
@@ -8,6 +8,7 @@ import { RxCrossCircled } from "react-icons/rx";
 
 import { useState } from "react";
 
+import resumePDF from "file:///C:/Users/krc26/my-app/public/Resume/Ravichandar%20Kadavakuti.pdf";
 const Navbar = () => {
   const [ham, setHam] = useState(false);
 
@@ -17,9 +18,9 @@ const Navbar = () => {
   return (
     <nav className="nav-container">
       <div className="nav-flex">
-        <Link to="/" className="home-link">
+        <NavLink to="/" className="home-link" activeClassName="active" exact>
           <h1 className="nav-logo">Portfolio</h1>
-        </Link>
+        </NavLink>
 
         {ham ? (
           <RxCrossCircled className="ham-icon" onClick={onclickHam} />
@@ -30,24 +31,52 @@ const Navbar = () => {
 
       {ham ? (
         <ul className="sm-nav-list">
-          <Link to="/" className="link">
+          <NavLink to="/" className="link" activeClassName="active" exact>
             <li className="nav-item">Home</li>
-          </Link>
-          <Link to="/projects" className="link">
+          </NavLink>
+          <NavLink
+            to="/projects"
+            className="link"
+            activeClassName="active"
+            exact
+          >
             <li className="nav-item">Projects</li>
-          </Link>
+          </NavLink>
+          <NavLink
+            to="/certificates"
+            className="link"
+            activeClassName="active"
+            exact
+          >
+            <li className="nav-item">Certificates</li>
+          </NavLink>
+
+          <a className="link" href={resumePDF} download>
+            <li className="nav-item">Resume</li>
+          </a>
         </ul>
       ) : (
         ""
       )}
 
       <ul className="lg-nav-list">
-        <Link to="/" className="link">
+        <NavLink to="/" className="link" activeClassName="active" exact>
           <li className="nav-item">Home</li>
-        </Link>
-        <Link to="/projects" className="link">
+        </NavLink>
+        <NavLink to="/projects" className="link" activeClassName="active" exact>
           <li className="nav-item">Projects</li>
-        </Link>
+        </NavLink>
+        <NavLink
+          to="/certificates"
+          className="link"
+          activeClassName="active"
+          exact
+        >
+          <li className="nav-item">Certificates</li>
+        </NavLink>
+        <a className="link" href={resumePDF} download>
+          <li className="nav-item">Resume</li>
+        </a>
       </ul>
     </nav>
   );
